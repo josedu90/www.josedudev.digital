@@ -7,11 +7,11 @@
 DEVDIR="web/app/uploads/"
 DEVSITE="http://josedudev.test"
 
-PRODDIR="web@josedudev.xyz:/srv/www/josedudev.xyz/shared/uploads/"
-PRODSITE="https://josedudev.xyz"
+PRODDIR="web@68.183.121.214:/srv/www/www.josedudev.digital/shared/uploads/"
+PRODSITE="https://josedudev.digital"
 
-STAGDIR="web@staging.josedudev.xyz:/srv/www/josedudev.xyz/shared/uploads/"
-STAGSITE="https://staging.josedudev.xyz"
+STAGDIR="web@staging.josedudev.xyz:/srv/www/www.josedudev.digital/shared/uploads/"
+STAGSITE="https://staging.josedudev.digital"
 
 FROM=$1
 TO=$2
