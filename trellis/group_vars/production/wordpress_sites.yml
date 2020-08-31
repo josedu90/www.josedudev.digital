@@ -1,0 +1,26 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  www.josedudev.digital:
+    site_hosts:
+      - canonical: www.josedudev.digital
+        redirects:
+          - josedudev.digital
+    local_path: ../www.josedudev.digital # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:josedu90/www.josedudev.digital.git # replace with your Git repo URL
+    repo_subtree_path: www.josedudev.digital # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      # SSL must be enabled
+      enabled: true
+      # OCSP stapling must be disabled
+      stapling_enabled: false
+      # Use this role to generate Cloudflare Origin CA certificate
+      provider: cloudflare-origin-ca
+
+    cache:
+      enabled: true
