@@ -1,3 +1,16 @@
 path: web/wp
-server:
-  docroot: web
+
+@development:
+  ssh: vagrant@josedudev.test/srv/www/www.josedudev.digitalcurrent
+
+@staging:
+  ssh: vagrant@staging.josedudev.digital/srv/www/www.staging.josedudev.digital/current
+
+@production:
+  ssh: web@68.183.121.214/srv/www/www.josedudev.digital/current
+
+@all:
+ - @development
+ - @staging
+ - @production
+
