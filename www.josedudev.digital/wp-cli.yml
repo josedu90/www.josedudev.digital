@@ -1,7 +1,7 @@
 path: web/wp
 
 @development:
-  ssh: vagrant@josedudev.test/srv/www/www.josedudev.digitalcurrent
+  ssh: vagrant@josedudev.test/srv/www/www.josedudev.digital/current
 
 @staging:
   ssh: vagrant@staging.josedudev.digital/srv/www/www.staging.josedudev.digital/current
